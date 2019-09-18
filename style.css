@@ -15,11 +15,11 @@ body {
   height: 30rem;
   border: 8px solid #000000;
   border-radius: 50%;
-  margin: auto auto;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   padding: 1rem;
-  top: 50vh;
-  transform: translateY(-15rem);
 }
 
 .clock-face {
@@ -40,4 +40,16 @@ body {
   transform: rotate(90deg);
   transition: all 0.5s;
   border-radius: 25px;
+}
+
+@media only screen and (max-width: 1025px) {
+  .clock {
+    width: 15rem;
+    height: 15rem;
+    border: 6px solid #000000;
+  }
+
+  .hand {
+    height: 4px;
+  }
 }
